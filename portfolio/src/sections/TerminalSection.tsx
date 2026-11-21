@@ -27,7 +27,7 @@ export function TerminalSection({ onOpenProject }: TerminalSectionProps) {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <SectionHeading
             id="terminal-title"
-            eyebrow="06 · Terminal"
+            eyebrow="05 · Terminal"
             title="Prefer the command line?"
             lede="An optional, fully working terminal. Every command reads the same data as the rest of the page, and “open csrd” opens a real case study."
           />

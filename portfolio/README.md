@@ -53,7 +53,6 @@ All copy lives in `src/data/`, separate from the components:
 | Experience | Scroll-driven timeline, focus filter, tenure, expandable responsibilities with emphasised metrics |
 | Projects | Five case-study cards with interactive, clearly labelled illustrative UI mockups and a lazy-loaded case-study dialog |
 | Skills | Category filter, brand icons, skill → project links (no proficiency bars) |
-| Code meets design | Figma-style canvas driving the real `StatCard`; code tabs show the site's actual source via `?raw` imports |
 | Terminal | Working CLI: `help`, `about`, `skills`, `projects`, `open <id>`, `experience`, `contact`, `resume`, `clear`; history, Tab completion, Ctrl+L |
 | Contact | Validated form (name, email, subject, message) with loading, success and error states, honeypot, email fallback |
 
@@ -63,7 +62,6 @@ All copy lives in `src/data/`, separate from the components:
 src/
   components/
     background/   AmbientBackground, CursorGlow, DotField, GlowOrbs
-    craft/        CodePanel (lazy chunk: source viewer + highlighter)
     hero/         CodeWindow, RoleRotator
     layout/       Navbar, MobileMenu, ScrollProgress, PageLoader, Footer
     projects/     ProjectCard, ProjectDialog (lazy), previews/
@@ -72,7 +70,7 @@ src/
   data/           All site content
   hooks/          useCountUp, useContactForm, useActiveSection, useMagnetic, useTypewriter, useFocusTrap, ...
   lib/            contact (form integration), cn, motion tokens, scroll, resume download
-  sections/       Hero, Impact, About, Experience, Projects, Skills, Craft, TerminalSection, Contact
+  sections/       Hero, Impact, About, Experience, Projects, Skills, TerminalSection, Contact
   types/          Shared TypeScript types
   index.css       Design tokens (@theme) and surface utilities
 vite.config.ts    Includes a small plugin that injects the site URL and emits sitemap.xml / robots.txt
@@ -96,7 +94,7 @@ Type: Space Grotesk (display), Inter (body), Geist Mono (code), from Google Font
 
 - `prefers-reduced-motion`: loader, typing, counters, reveals and cursor glow are skipped; content appears immediately.
 - Semantic landmarks, one `h1`, labelled sections, skip link, visible focus, focus-trapped dialogs that restore focus, `aria-live` for terminal output and form status, labelled inputs with inline errors.
-- Code splitting: case-study dialog, code viewer and skill icon set load as separate chunks (icons on idle). React and Framer Motion are long-cached vendor chunks.
+- Code splitting: case-study dialog and skill icon set load as separate chunks (icons on idle). React and Framer Motion are long-cached vendor chunks.
 - No layout shift from lazy content: placeholders reserve the same space.
 
 ## Deploying to Vercel

@@ -16,7 +16,6 @@ import { Projects } from '@/sections/Projects';
 import { Skills } from '@/sections/Skills';
 import { Contact } from '@/sections/Contact';
 import { Impact } from '@/sections/Impact';
-import { Craft } from '@/sections/Craft';
 import { TerminalSection } from '@/sections/TerminalSection';
 
 // The case-study dialog is split into its own chunk and only loads when opened.
@@ -54,7 +53,6 @@ export default function App() {
         <Experience />
         <Projects onOpen={openCaseStudy} />
         <Skills onOpenProject={openCaseStudy} />
-        <Craft />
         <TerminalSection onOpenProject={openCaseStudy} />
         <Contact />
       </main>

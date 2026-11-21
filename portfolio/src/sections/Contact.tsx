@@ -141,7 +141,7 @@ export function Contact() {
           <Reveal blur>
             <p className="eyebrow mb-5 flex items-center gap-3">
               <span aria-hidden="true" className="h-px w-8 bg-[linear-gradient(90deg,transparent,var(--color-signal-soft))]" />
-              07 · Contact
+              06 · Contact
             </p>
             <h2 id="contact-title" className="text-[2.4rem] leading-[1.02] font-semibold tracking-[-0.04em] text-fg sm:text-6xl">
               Let’s Build <span className="text-gradient-animated">Something Meaningful.</span>
